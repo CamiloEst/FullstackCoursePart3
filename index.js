@@ -21,7 +21,7 @@ app.get('/api/persons', (request, response) => {
 app.get('/info', (request, response) => {
   Person.count({}).then((size) => {
     response
-      .send(`<p>Phonebook has info for ${size} people${new Date()}</p>`)
+      .send(`<p>Phonebook has info for ${size} people </p> <p>${new Date()}</p>`)
       .end()
   })
 })
